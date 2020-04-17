@@ -1,6 +1,6 @@
-import { combineRedcuers } from "redux";
+import { combineReducers } from "redux";
 import { smurfReducer as smurfs } from "./smurfReducer"
 
-export default combineRedcuers({
+export default combineReducers({
     smurfs
 })
