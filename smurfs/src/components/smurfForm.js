@@ -5,7 +5,9 @@ import { connect } from "react-redux";
 import {postSmurfs} from "../actions/smurfAction"
 
 
-export const Form = (props) => {
+ const Form = (props) => {
+    // console.log(props)
+    console.log(postSmurfs)
     const [nameInput, setNameInput] = useState('');
     const [ageInput, setAgeInput] = useState(1);
     const [heightInput, setHeightInput] = useState('');
@@ -13,10 +15,10 @@ export const Form = (props) => {
     return (
         <form onSubmit={(event) => {
             event.preventDefault()
-            postSmurfs(nameInput, ageInput, heightInput)
+            props.postSmurfs(nameInput, ageInput, heightInput)
             setNameInput('')
             setAgeInput('')
-            setNameInput('')
+            setHeightInput('')
         }}>
             <input
                 placeholder="Enter a smurf name:"

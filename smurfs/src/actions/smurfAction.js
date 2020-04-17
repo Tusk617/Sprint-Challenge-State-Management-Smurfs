@@ -18,11 +18,12 @@ export const postSmurfs = (smurfName, smurfAge, smurfHeight) => {
         height: smurfHeight
     }
     return dispatch => {
+        console.log(newSmurf)
         dispatch({ type: "POST_SMURF_START"});
-        axios.post("http://localhost:3333/smurfs", {newSmurf})
+        axios.post("http://localhost:3333/smurfs", newSmurf)
         .then(response => {
             console.log(response)
-            dispatch({ type: "POST_SMURF_SUCCESS", payload: {newSmurf}});
+            dispatch({ type: "POST_SMURF_SUCCESS", payload: response.data});
         })
     }
 }

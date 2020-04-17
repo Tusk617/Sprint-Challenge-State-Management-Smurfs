@@ -5,6 +5,7 @@ import { fetchSmurfs, postSmurfs } from "../actions/smurfAction";
 
 const SmurfsComponenet = (props) => {
     // console.log(props.smurfVillage);
+    console.log(postSmurfs)
     return (
         <div>
             <h1>Welcome to the Smurf Village!</h1>
